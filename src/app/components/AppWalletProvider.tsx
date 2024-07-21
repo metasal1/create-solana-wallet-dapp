@@ -24,9 +24,9 @@ export default function AppWalletProvider({
             // manually add any legacy wallet adapters here
             // new UnsafeBurnerWalletAdapter(),
             new TipLinkWalletAdapter({
-                title: "Name of Dapp",
-                clientId: "694bf97c-d2ac-4dfc-a786-a001812658df",
-                theme: "dark"  // pick between "dark"/"light"/"system"
+                title: "sol.new",
+                clientId: process.env.NEXT_PUBLIC_TIPLINK || "",
+                theme: "system"  // pick between "dark"/"light"/"system"
             }),
         ],
         [network],
